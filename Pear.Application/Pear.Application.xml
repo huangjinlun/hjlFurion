@@ -1,0 +1,1275 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pear.Application</name>
+    </assembly>
+    <members>
+        <member name="T:Pear.Application.ApiGroupConsts">
+            <summary>
+            接口分组定义
+            </summary>
+        </member>
+        <member name="F:Pear.Application.ApiGroupConsts.USER_CENTER">
+            <summary>
+            用户中心
+            </summary>
+        </member>
+        <member name="F:Pear.Application.ApiGroupConsts.SYSTEM_CENTER">
+            <summary>
+            系统中心
+            </summary>
+        </member>
+        <member name="F:Pear.Application.ApiGroupConsts.SCHOOL_CENTER">
+            <summary>
+            校园中心
+            </summary>
+        </member>
+        <member name="P:Pear.Application.SchoolCenter.GetSchoolClassListInput.PageIndex">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:Pear.Application.SchoolCenter.GetSchoolClassListInput.PageSize">
+            <summary>
+            页容量
+            </summary>
+        </member>
+        <member name="P:Pear.Application.SchoolCenter.GetSchoolClassListInput.Keyword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="P:Pear.Application.SchoolCenter.ModifySchoolClassInput.ClassName">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Pear.Application.SchoolCenter.SchoolClassProfile.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.ISchoolClassAppService.AddClassAsync(Pear.Application.SchoolCenter.AddSchoolClassInput)">
+            <summary>
+            新增班级
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.ISchoolClassAppService.ModifyAsync(System.Int32,Pear.Application.SchoolCenter.ModifySchoolClassInput)">
+            <summary>
+            编辑班级信息
+            </summary>
+            <param name="userId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.ISchoolClassAppService.GetListAsync(Pear.Application.SchoolCenter.GetSchoolClassListInput)">
+            <summary>
+            获取所有班级列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.ISchoolClassAppService.DeleteAsync(System.Int32[])">
+            <summary>
+            删除班级
+            </summary>
+            <param name="calssIds"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Pear.Application.SchoolCenter.SchoolClassService.SchoolClassAppService._classRepository">
+            <summary>
+            班级仓储
+            </summary>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.SchoolClassService.SchoolClassAppService.#ctor(Furion.DatabaseAccessor.IRepository{Pear.Core.SchoolClass})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="classRepository"></param>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.SchoolClassService.SchoolClassAppService.AddClassAsync(Pear.Application.SchoolCenter.AddSchoolClassInput)">
+            <summary>
+            新增班级
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.SchoolClassService.SchoolClassAppService.GetListAsync(Pear.Application.SchoolCenter.GetSchoolClassListInput)">
+            <summary>
+            获取所有班级列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.SchoolClassService.SchoolClassAppService.ModifyAsync(System.Int32,Pear.Application.SchoolCenter.ModifySchoolClassInput)">
+            <summary>
+            编辑班级
+            </summary>
+            <param name="classId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.SchoolClassService.SchoolClassAppService.DeleteAsync(System.Int32[])">
+            <summary>
+            删除班级
+            </summary>
+            <param name="classIds"></param>
+            <returns></returns>
+        </member>
+        <member name="P:Pear.Application.SchoolCenter.GetStudentListInput.PageIndex">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:Pear.Application.SchoolCenter.GetStudentListInput.PageSize">
+            <summary>
+            页容量
+            </summary>
+        </member>
+        <member name="P:Pear.Application.SchoolCenter.GetStudentListInput.Keyword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.IStudentAppService.GetListAsync(Pear.Application.SchoolCenter.GetStudentListInput)">
+            <summary>
+            获取所有学生列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.IStudentAppService.AddAsync(Pear.Application.SchoolCenter.AddStudentInput)">
+            <summary>
+            新增学生
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.IStudentAppService.ModifyAsync(System.Int32,Pear.Application.SchoolCenter.ModifyStudentInput)">
+            <summary>
+            编辑学生信息
+            </summary>
+            <param name="goodsInfoId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.StudentAppService.#ctor(Furion.DatabaseAccessor.IRepository{Pear.Core.Student},Furion.DatabaseAccessor.IRepository{Pear.Core.SchoolClass},Furion.DatabaseAccessor.IRepository{Pear.Core.Teacher})">
+            <summary>
+            构造函数
+            </summary>
+            <param name="studnetRepository"></param>
+            <param name="schoolClassRepository"></param>
+             <param name="teacherRepository"></param>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.StudentAppService.GetListAsync(Pear.Application.SchoolCenter.GetStudentListInput)">
+            <summary>
+            （复杂查询）查询分配班级的老师受教的学生分页列表
+            </summary>
+            <param name="input"></param>
+        </member>
+        <member name="P:Pear.Application.SchoolCenter.GetTeacherListInput.PageIndex">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:Pear.Application.SchoolCenter.GetTeacherListInput.PageSize">
+            <summary>
+            页容量
+            </summary>
+        </member>
+        <member name="P:Pear.Application.SchoolCenter.GetTeacherListInput.Keyword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.ITeacherAppService.GetListAsync(Pear.Application.SchoolCenter.GetTeacherListInput)">
+            <summary>
+            获取所有老师列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.ITeacherAppService.AddAsync(Pear.Application.SchoolCenter.AddTeacherInput)">
+            <summary>
+            新增老师
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.ITeacherAppService.ModifyAsync(System.Int32,Pear.Application.SchoolCenter.ModifyTeacherInput)">
+            <summary>
+            编辑老师信息
+            </summary>
+            <param name="goodsInfoId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.ITeacherAppService.GiveAsync(System.Int32,System.Int32[])">
+            <summary>
+            为老师分配受教班级
+            </summary>
+            <param name="classId"></param>
+            <param name="teacherds"></param>
+        </member>
+        <member name="F:Pear.Application.SchoolCenter.TeacherAppService._userManager">
+            <summary>
+            老师管理类
+            </summary>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.TeacherAppService.#ctor(Furion.DatabaseAccessor.IRepository{Pear.Core.Student},Furion.DatabaseAccessor.IRepository{Pear.Core.Teacher},Pear.Core.IUserManager)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="studnetRepository"></param>
+            <param name="teacherRepository"></param>
+            <param name="userManager"></param>
+        </member>
+        <member name="M:Pear.Application.SchoolCenter.TeacherAppService.GiveAsync(System.Int32,System.Int32[])">
+            <summary>
+            为老师分配受教班级
+            </summary>
+            <param name="classId"></param>
+            <param name="teacherds"></param>
+        </member>
+        <member name="T:Pear.Application.UserCenter.EditSystemDataCategoryInput">
+            <summary>
+            数据字典分类信息
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.EditSystemDataCategoryInput.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.EditSystemDataCategoryInput.Remark">
+            <summary>
+            分类描述
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.EditSystemDataCategoryInput.Sequence">
+            <summary>
+            序号/排序
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.EditSystemDataCategoryInput.HigherId">
+            <summary>
+            上级分类 Id
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.EditSystemDataCategoryInput.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:Pear.Application.UserCenter.EditSystemDataInput">
+            <summary>
+            数据字典信息输入参数
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.EditSystemDataInput.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.EditSystemDataInput.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.EditSystemDataInput.Sequence">
+            <summary>
+            序号/排序
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.EditSystemDataInput.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:Pear.Application.UserCenter.SystemDataCategoryProfile">
+            <summary>
+            数据字典分类信息
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.SystemDataCategoryProfile.Id">
+            <summary>
+            分类 Id
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.SystemDataCategoryProfile.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.SystemDataCategoryProfile.Remark">
+            <summary>
+            分类描述
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.SystemDataCategoryProfile.Sequence">
+            <summary>
+            序号/排序
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.SystemDataCategoryProfile.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.SystemDataCategoryProfile.HigherId">
+            <summary>
+            上级分类 Id
+            </summary>
+        </member>
+        <member name="T:Pear.Application.UserCenter.SystemDataProfile">
+            <summary>
+            数据字典信息
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.SystemDataProfile.Id">
+            <summary>
+            Id
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.SystemDataProfile.Name">
+            <summary>
+            名称
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.SystemDataProfile.Remark">
+            <summary>
+            描述
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.SystemDataProfile.Sequence">
+            <summary>
+            序号/排序
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.SystemDataProfile.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.SystemDataProfile.CategoryId">
+            <summary>
+            所属分类Id
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.SystemDataProfile.CategoryName">
+            <summary>
+            所属分类名
+            </summary>
+        </member>
+        <member name="T:Pear.Application.UserCenter.ISystemDataService">
+            <summary>
+            数据字典接口
+            </summary>
+        </member>
+        <member name="M:Pear.Application.UserCenter.ISystemDataService.GetCategoriesAsync">
+            <summary>
+            获取所有分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.ISystemDataService.GetDataAsync(System.Int32)">
+            <summary>
+            获取分类数据
+            </summary>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.ISystemDataService.GetCategoryAsync(System.Int32)">
+            <summary>
+            获取分类信息
+            </summary>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.ISystemDataService.ModifyAsync(System.Int32,Pear.Application.UserCenter.EditSystemDataCategoryInput)">
+            <summary>
+            修改分类信息
+            </summary>
+            <param name="categoryId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.ISystemDataService.AddAsync(Pear.Application.UserCenter.EditSystemDataCategoryInput)">
+            <summary>
+            新增分类
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.ISystemDataService.DeleteAsync(System.Int32)">
+            <summary>
+            删除分类
+            </summary>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.ISystemDataService.AddDictionaryDataAsync(System.Int32,Pear.Application.UserCenter.EditSystemDataInput)">
+            <summary>
+            新增字典数据
+            </summary>
+            <param name="categoryId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.ISystemDataService.UpdateDictionaryDataAsync(System.Int32,System.Int32,Pear.Application.UserCenter.EditSystemDataInput)">
+            <summary>
+            更新字典数据
+            </summary>
+            <param name="categoryId"></param>
+            <param name="dataId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.ISystemDataService.DeleteDictionaryDataAsync(System.Int32,System.Int32[])">
+            <summary>
+            删除字典数据
+            </summary>
+            <param name="categoryId"></param>
+            <param name="dataIds"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pear.Application.UserCenter.SystemDataService">
+            <summary>
+            数据字典服务
+            </summary>
+        </member>
+        <member name="F:Pear.Application.UserCenter.SystemDataService._memoryCache">
+            <summary>
+            内存缓存
+            </summary>
+        </member>
+        <member name="F:Pear.Application.UserCenter.SystemDataService._categoryRepository">
+            <summary>
+            分类仓储
+            </summary>
+        </member>
+        <member name="F:Pear.Application.UserCenter.SystemDataService._dataRepository">
+            <summary>
+            数据仓储
+            </summary>
+        </member>
+        <member name="M:Pear.Application.UserCenter.SystemDataService.#ctor(Furion.DatabaseAccessor.IRepository{Pear.Core.SystemDataCategory},Furion.DatabaseAccessor.IRepository{Pear.Core.SystemData},Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="categoryRepository"></param>
+            <param name="dataRepository"></param>
+            <param name="memoryCache"></param>
+        </member>
+        <member name="M:Pear.Application.UserCenter.SystemDataService.GetCategoriesAsync">
+            <summary>
+            获取所有分类
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.SystemDataService.GetDataAsync(System.Int32)">
+            <summary>
+            获取分类数据
+            </summary>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.SystemDataService.GetCategoryAsync(System.Int32)">
+            <summary>
+            获取分类信息
+            </summary>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.SystemDataService.ModifyAsync(System.Int32,Pear.Application.UserCenter.EditSystemDataCategoryInput)">
+            <summary>
+            修改分类信息
+            </summary>
+            <param name="categoryId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.SystemDataService.AddAsync(Pear.Application.UserCenter.EditSystemDataCategoryInput)">
+            <summary>
+            新增分类
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.SystemDataService.DeleteAsync(System.Int32)">
+            <summary>
+            删除分类
+            </summary>
+            <param name="categoryId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.SystemDataService.AddDictionaryDataAsync(System.Int32,Pear.Application.UserCenter.EditSystemDataInput)">
+            <summary>
+            新增字典数据
+            </summary>
+            <param name="categoryId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.SystemDataService.UpdateDictionaryDataAsync(System.Int32,System.Int32,Pear.Application.UserCenter.EditSystemDataInput)">
+            <summary>
+            更新字典数据
+            </summary>
+            <param name="categoryId"></param>
+            <param name="dataId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.SystemDataService.DeleteDictionaryDataAsync(System.Int32,System.Int32[])">
+            <summary>
+            删除字典数据
+            </summary>
+            <param name="categoryId"></param>
+            <param name="dataIds"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pear.Application.UserCenter.AuthorizeService">
+            <summary>
+            授权服务
+            </summary>
+        </member>
+        <member name="F:Pear.Application.UserCenter.AuthorizeService._userRepository">
+            <summary>
+            用户仓储
+            </summary>
+        </member>
+        <member name="F:Pear.Application.UserCenter.AuthorizeService._userManager">
+            <summary>
+            用户管理类
+            </summary>
+        </member>
+        <member name="M:Pear.Application.UserCenter.AuthorizeService.#ctor(Furion.DatabaseAccessor.IRepository{Pear.Core.User},Pear.Core.IUserManager)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="userRepository"></param>
+            <param name="userManager"></param>
+        </member>
+        <member name="M:Pear.Application.UserCenter.AuthorizeService.LoginAsync(Microsoft.AspNetCore.Http.IHttpContextAccessor,Pear.Application.UserCenter.LoginInput)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="httpContextAccessor"></param>
+            <param name="input"></param>
+            <remarks>
+            用户名/密码：admin/admin
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:Pear.Application.UserCenter.LoginInput">
+            <summary>
+            登录模型
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.LoginInput.Account">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.LoginInput.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="T:Pear.Application.UserCenter.LoginOutput">
+            <summary>
+            登录模型
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.LoginOutput.Id">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.LoginOutput.Account">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.LoginOutput.AccessToken">
+            <summary>
+            Token
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.LoginOutput.Nickname">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.LoginOutput.Photo">
+            <summary>
+            头像（OSS地址）
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.LoginOutput.SigninedTime">
+            <summary>
+            最近登录时间
+            </summary>
+        </member>
+        <member name="T:Pear.Application.UserCenter.IAuthorizeService">
+            <summary>
+            授权服务接口
+            </summary>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IAuthorizeService.LoginAsync(Microsoft.AspNetCore.Http.IHttpContextAccessor,Pear.Application.UserCenter.LoginInput)">
+            <summary>
+            用户登录
+            </summary>
+            <param name="httpContextAccessor"></param>
+            <param name="input"></param>
+            <remarks>
+            用户名/密码：admin/admin
+            </remarks>
+            <returns></returns>
+        </member>
+        <member name="T:Pear.Application.UserCenter.EditRoleInput">
+            <summary>
+            新增角色输入参数
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.EditRoleInput.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.EditRoleInput.Remark">
+            <summary>
+            角色描述
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.EditRoleInput.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:Pear.Application.UserCenter.GetRoleListInput">
+            <summary>
+            获取角色列表参数
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.GetRoleListInput.PageIndex">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.GetRoleListInput.PageSize">
+            <summary>
+            页容量
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.GetRoleListInput.Keyword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="T:Pear.Application.UserCenter.RoleProfile">
+            <summary>
+            角色信息
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.RoleProfile.Id">
+            <summary>
+            角色 Id
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.RoleProfile.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.RoleProfile.Remark">
+            <summary>
+            角色描述
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.RoleProfile.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:Pear.Application.UserCenter.IRoleAppService">
+            <summary>
+            角色服务接口
+            </summary>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IRoleAppService.GetListAsync(Pear.Application.UserCenter.GetRoleListInput)">
+            <summary>
+            获取所有角色列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IRoleAppService.AddAsync(Pear.Application.UserCenter.EditRoleInput)">
+            <summary>
+            新增角色
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IRoleAppService.ModifyAsync(System.Int32,Pear.Application.UserCenter.EditRoleInput)">
+            <summary>
+            编辑角色
+            </summary>
+            <param name="roleId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IRoleAppService.DeleteAsync(System.Int32[])">
+            <summary>
+            删除角色
+            </summary>
+            <param name="roleIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IRoleAppService.GiveAsync(System.Int32,System.Int32[])">
+            <summary>
+            为用户分配角色
+            </summary>
+            <param name="userId"></param>
+            <param name="roleIds"></param>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IRoleAppService.GetSecuritiesAsync(System.Int32)">
+            <summary>
+            获取角色拥有权限
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pear.Application.UserCenter.RoleAppService">
+            <summary>
+            角色服务
+            </summary>
+        </member>
+        <member name="F:Pear.Application.UserCenter.RoleAppService._roleRepository">
+            <summary>
+            角色仓储
+            </summary>
+        </member>
+        <member name="F:Pear.Application.UserCenter.RoleAppService._userManager">
+            <summary>
+            用户管理
+            </summary>
+        </member>
+        <member name="M:Pear.Application.UserCenter.RoleAppService.#ctor(Furion.DatabaseAccessor.IRepository{Pear.Core.Role},Pear.Core.IUserManager)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="roleRepository"></param>
+            <param name="userManager"></param>
+        </member>
+        <member name="M:Pear.Application.UserCenter.RoleAppService.GetListAsync(Pear.Application.UserCenter.GetRoleListInput)">
+            <summary>
+            获取所有角色列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.RoleAppService.AddAsync(Pear.Application.UserCenter.EditRoleInput)">
+            <summary>
+            新增角色
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.RoleAppService.ModifyAsync(System.Int32,Pear.Application.UserCenter.EditRoleInput)">
+            <summary>
+            编辑角色
+            </summary>
+            <param name="roleId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.RoleAppService.DeleteAsync(System.Int32[])">
+            <summary>
+            删除角色
+            </summary>
+            <param name="roleIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.RoleAppService.GiveAsync(System.Int32,System.Int32[])">
+            <summary>
+            为用户分配角色
+            </summary>
+            <param name="userId"></param>
+            <param name="roleIds"></param>
+        </member>
+        <member name="M:Pear.Application.UserCenter.RoleAppService.GetSecuritiesAsync(System.Int32)">
+            <summary>
+            获取角色拥有权限
+            </summary>
+            <param name="roleId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pear.Application.UserCenter.GetSecurityListInput">
+            <summary>
+            获取权限列表参数
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.GetSecurityListInput.PageIndex">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.GetSecurityListInput.PageSize">
+            <summary>
+            页容量
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.GetSecurityListInput.Keyword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="T:Pear.Application.UserCenter.SecurityProfile">
+            <summary>
+            权限信息
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.SecurityProfile.Id">
+            <summary>
+            权限 Id
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.SecurityProfile.UniqueName">
+            <summary>
+            权限唯一名（每一个接口）
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.SecurityProfile.Remark">
+            <summary>
+            全新描述
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.SecurityProfile.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:Pear.Application.UserCenter.ISecurityService">
+            <summary>
+            权限服务接口
+            </summary>
+        </member>
+        <member name="M:Pear.Application.UserCenter.ISecurityService.Refresh(System.Int32)">
+            <summary>
+            刷新用户权限缓存
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.ISecurityService.GetListAsync(Pear.Application.UserCenter.GetSecurityListInput)">
+            <summary>
+            获取所有权限列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.ISecurityService.GetAllAsync">
+            <summary>
+            获取所有权限列表（不分页）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.ISecurityService.GiveAsync(System.Int32,System.Int32[])">
+            <summary>
+            为角色分配权限
+            </summary>
+            <param name="roleId"></param>
+            <param name="securityIds"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pear.Application.UserCenter.SecurityService">
+            <summary>
+            权限服务
+            </summary>
+        </member>
+        <member name="F:Pear.Application.UserCenter.SecurityService._securityRepository">
+            <summary>
+            权限仓储
+            </summary>
+        </member>
+        <member name="F:Pear.Application.UserCenter.SecurityService._roleRepository">
+            <summary>
+            角色仓储
+            </summary>
+        </member>
+        <member name="F:Pear.Application.UserCenter.SecurityService._memoryCache">
+            <summary>
+            内存缓存
+            </summary>
+        </member>
+        <member name="F:Pear.Application.UserCenter.SecurityService._userManager">
+            <summary>
+            用户管理
+            </summary>
+        </member>
+        <member name="M:Pear.Application.UserCenter.SecurityService.#ctor(Furion.DatabaseAccessor.IRepository{Pear.Core.Security},Furion.DatabaseAccessor.IRepository{Pear.Core.Role},Microsoft.Extensions.Caching.Memory.IMemoryCache,Pear.Core.IUserManager)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="securityRepository"></param>
+            <param name="roleRepository"></param>
+            <param name="memoryCache"></param>
+            <param name="userManager"></param>
+        </member>
+        <member name="M:Pear.Application.UserCenter.SecurityService.Refresh(System.Int32)">
+            <summary>
+            刷新用户权限缓存
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.SecurityService.GetListAsync(Pear.Application.UserCenter.GetSecurityListInput)">
+            <summary>
+            获取所有权限列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.SecurityService.GetAllAsync">
+            <summary>
+            获取所有权限列表（不分页）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.SecurityService.GiveAsync(System.Int32,System.Int32[])">
+            <summary>
+            为角色分配权限
+            </summary>
+            <param name="roleId"></param>
+            <param name="securityIds"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pear.Application.UserCenter.AddUserInput">
+            <summary>
+            新增用户信息
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.AddUserInput.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.AddUserInput.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.AddUserInput.ConfirmPassword">
+            <summary>
+            确认密码
+            </summary>
+        </member>
+        <member name="T:Pear.Application.UserCenter.ChangePasswordInput">
+            <summary>
+            修改密码参数
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.ChangePasswordInput.OldPassword">
+            <summary>
+            旧密码
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.ChangePasswordInput.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.ChangePasswordInput.ConfirmPassword">
+            <summary>
+            确认密码
+            </summary>
+        </member>
+        <member name="M:Pear.Application.UserCenter.ChangePasswordInput.Validate(System.ComponentModel.DataAnnotations.ValidationContext)">
+            <summary>
+            验证旧密码和新密码
+            </summary>
+            <param name="validationContext"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pear.Application.UserCenter.GetUserListInput">
+            <summary>
+            获取用户列表参数
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.GetUserListInput.PageIndex">
+            <summary>
+            页码
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.GetUserListInput.PageSize">
+            <summary>
+            页容量
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.GetUserListInput.Keyword">
+            <summary>
+            关键字
+            </summary>
+        </member>
+        <member name="T:Pear.Application.UserCenter.ModifyUserInput">
+            <summary>
+            编辑用户信息
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.ModifyUserInput.Nickname">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.ModifyUserInput.Photo">
+            <summary>
+            头像（OSS地址）
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.ModifyUserInput.Synopsis">
+            <summary>
+            简介
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.ModifyUserInput.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.ModifyUserInput.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:Pear.Application.UserCenter.UserProfile">
+            <summary>
+            用户信息
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.UserProfile.Id">
+            <summary>
+            用户 Id
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.UserProfile.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.UserProfile.Nickname">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.UserProfile.Photo">
+            <summary>
+            头像（OSS地址）
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.UserProfile.Synopsis">
+            <summary>
+            简介
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.UserProfile.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Pear.Application.UserCenter.UserProfile.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="T:Pear.Application.UserCenter.IUserAppService">
+            <summary>
+            用户服务接口
+            </summary>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IUserAppService.Profile">
+            <summary>
+            获取当前用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IUserAppService.ProfileAsync(System.Int32)">
+            <summary>
+            获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IUserAppService.GetListAsync(Pear.Application.UserCenter.GetUserListInput)">
+            <summary>
+            获取所有用户列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IUserAppService.ModifyAsync(Pear.Application.UserCenter.ModifyUserInput)">
+            <summary>
+            修改当前用户信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IUserAppService.DeleteAsync(System.Int32[])">
+            <summary>
+            删除用户
+            </summary>
+            <param name="userIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IUserAppService.AddAsync(Pear.Application.UserCenter.AddUserInput)">
+            <summary>
+            新增用户
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IUserAppService.ModifyAsync(System.Int32,Pear.Application.UserCenter.ModifyUserInput)">
+            <summary>
+            编辑用户信息
+            </summary>
+            <param name="userId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IUserAppService.ChangePassword(Pear.Application.UserCenter.ChangePasswordInput)">
+            <summary>
+            修改当前用户密码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IUserAppService.GetRolesAsync">
+            <summary>
+            查看当前用户拥有的角色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IUserAppService.GetRolesAsync(System.Int32)">
+            <summary>
+            查看用户拥有的角色
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IUserAppService.GetSecuritiesAsync">
+            <summary>
+            查看当前用户拥有的权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.IUserAppService.GetSecuritiesAsync(System.Int32)">
+            <summary>
+            查看用户拥有的权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Pear.Application.UserCenter.UserAppService">
+            <summary>
+            用户服务
+            </summary>
+        </member>
+        <member name="F:Pear.Application.UserCenter.UserAppService._userRepository">
+            <summary>
+            用户仓储
+            </summary>
+        </member>
+        <member name="F:Pear.Application.UserCenter.UserAppService._userManager">
+            <summary>
+            用户管理类
+            </summary>
+        </member>
+        <member name="M:Pear.Application.UserCenter.UserAppService.#ctor(Furion.DatabaseAccessor.IRepository{Pear.Core.User},Pear.Core.IUserManager)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="userRepository"></param>
+            <param name="userManager"></param>
+        </member>
+        <member name="M:Pear.Application.UserCenter.UserAppService.Profile">
+            <summary>
+            获取当前用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.UserAppService.ProfileAsync(System.Int32)">
+            <summary>
+            获取用户信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.UserAppService.GetListAsync(Pear.Application.UserCenter.GetUserListInput)">
+            <summary>
+            获取所有用户列表
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.UserAppService.ModifyAsync(Pear.Application.UserCenter.ModifyUserInput)">
+            <summary>
+            修改当前用户信息
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.UserAppService.DeleteAsync(System.Int32[])">
+            <summary>
+            删除用户
+            </summary>
+            <param name="userIds"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.UserAppService.AddAsync(Pear.Application.UserCenter.AddUserInput)">
+            <summary>
+            新增用户
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.UserAppService.ModifyAsync(System.Int32,Pear.Application.UserCenter.ModifyUserInput)">
+            <summary>
+            编辑用户信息
+            </summary>
+            <param name="userId"></param>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.UserAppService.ChangePassword(Pear.Application.UserCenter.ChangePasswordInput)">
+            <summary>
+            修改当前用户密码
+            </summary>
+            <param name="input"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.UserAppService.GetRolesAsync">
+            <summary>
+            查看当前用户拥有的角色
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.UserAppService.GetRolesAsync(System.Int32)">
+            <summary>
+            查看用户拥有的角色
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.UserAppService.GetSecuritiesAsync">
+            <summary>
+            查看当前用户拥有的权限
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Application.UserCenter.UserAppService.GetSecuritiesAsync(System.Int32)">
+            <summary>
+            查看用户拥有的权限
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

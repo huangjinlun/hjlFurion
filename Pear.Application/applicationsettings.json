@@ -1,0 +1,56 @@
+﻿{
+  "SpecificationDocumentSettings": {
+    "DocumentTitle": "Pear Admin Furion",
+    "GroupOpenApiInfos": [
+      {
+        "Group": "UserCenter",
+        "Title": "用户中心",
+        "Description": "基于 .Net 5 平台 Furion 生态的落地实践。",
+        "Version": "1.0.0",
+        "TermsOfService": "http://www.pearadmin.com/",
+        "Contact": {
+          "Name": "百小僧",
+          "Url": "https://gitee.com/pear-admin/pear-admin-furion",
+          "Email": "monksoul@outlook.com"
+        },
+        "License": {
+          "Name": "Apache-2.0",
+          "Url": "https://gitee.com/pear-admin/pear-admin-furion/blob/master/LICENSE"
+        },
+        "Order": 1
+      },
+      {
+        "Group": "SystemCenter",
+        "Title": "系统中心",
+        "Description": "基于 .Net 5 平台 Furion 生态的落地实践。",
+        "Version": "1.0.0",
+        "TermsOfService": "http://www.pearadmin.com/",
+        "Contact": {
+          "Name": "百小僧",
+          "Url": "https://gitee.com/pear-admin/pear-admin-furion",
+          "Email": "monksoul@outlook.com"
+        },
+        "License": {
+          "Name": "Apache-2.0",
+          "Url": "https://gitee.com/pear-admin/pear-admin-furion/blob/master/LICENSE"
+        }
+      },
+      {
+        "Group": "SchoolCenter",
+        "Title": "校园中心",
+        "Description": "基于 .Net 5 平台 Furion 生态的落地实践。",
+        "Version": "1.0.0",
+        "TermsOfService": "http://www.pearadmin.com/",
+        "Contact": {
+          "Name": "百小僧",
+          "Url": "https://gitee.com/pear-admin/pear-admin-furion",
+          "Email": "monksoul@outlook.com"
+        },
+        "License": {
+          "Name": "Apache-2.0",
+          "Url": "https://gitee.com/pear-admin/pear-admin-furion/blob/master/LICENSE"
+        }
+      }
+    ]
+  }
+}

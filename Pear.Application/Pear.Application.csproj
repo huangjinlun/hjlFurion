@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <NoWarn>1701;1702;1591</NoWarn>
+    <DocumentationFile>Pear.Application.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="applicationsettings.json" />
+    <None Remove="Pear.Application.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="applicationsettings.json">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Pear.Core\Pear.Core.csproj" />
+  </ItemGroup>
+
+</Project>

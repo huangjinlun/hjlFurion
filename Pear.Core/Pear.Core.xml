@@ -1,0 +1,590 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pear.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Pear.Core.SecurityConsts">
+            <summary>
+            权限定义
+            </summary>
+        </member>
+        <member name="T:Pear.Core.ClassTeacher">
+            <summary>
+            班级、老师多对多关系中间实体
+            </summary>
+        </member>
+        <member name="M:Pear.Core.SchoolClass.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Pear.Core.SchoolClass.Teachers">
+            <summary>
+            多对多 班级对应老师
+            </summary>
+        </member>
+        <member name="P:Pear.Core.SchoolClass.ClassTeachers">
+            <summary>
+            多对多中间表 老师可以教多个班级
+            </summary>
+        </member>
+        <member name="M:Pear.Core.Student.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Pear.Core.Student.SchoolClass">
+            <summary>
+            一个班级可以有多个学生
+            </summary>
+        </member>
+        <member name="M:Pear.Core.Teacher.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Pear.Core.Teacher.SchoolClasss">
+            <summary>
+            多对多 班级对老师
+            </summary>
+        </member>
+        <member name="P:Pear.Core.Teacher.ClassTeachers">
+            <summary>
+            多对多中间表
+            </summary>
+        </member>
+        <member name="T:Pear.Core.SystemData">
+            <summary>
+            数据字典
+            </summary>
+        </member>
+        <member name="M:Pear.Core.SystemData.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Pear.Core.SystemData.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Pear.Core.SystemData.Remark">
+            <summary>
+            分类描述
+            </summary>
+        </member>
+        <member name="P:Pear.Core.SystemData.Sequence">
+            <summary>
+            序号/排序
+            </summary>
+        </member>
+        <member name="P:Pear.Core.SystemData.CategoryId">
+            <summary>
+            所属分类Id
+            </summary>
+        </member>
+        <member name="P:Pear.Core.SystemData.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Pear.Core.SystemData.Category">
+            <summary>
+            所属分类
+            </summary>
+        </member>
+        <member name="T:Pear.Core.SystemDataCategory">
+            <summary>
+            数据字典类别
+            </summary>
+        </member>
+        <member name="M:Pear.Core.SystemDataCategory.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Pear.Core.SystemDataCategory.Name">
+            <summary>
+            分类名称
+            </summary>
+        </member>
+        <member name="P:Pear.Core.SystemDataCategory.Remark">
+            <summary>
+            分类描述
+            </summary>
+        </member>
+        <member name="P:Pear.Core.SystemDataCategory.Sequence">
+            <summary>
+            序号/排序
+            </summary>
+        </member>
+        <member name="P:Pear.Core.SystemDataCategory.HigherId">
+            <summary>
+            上级分类 Id
+            </summary>
+        </member>
+        <member name="P:Pear.Core.SystemDataCategory.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Pear.Core.SystemDataCategory.Higher">
+            <summary>
+            上级分类
+            </summary>
+        </member>
+        <member name="P:Pear.Core.SystemDataCategory.Sublevels">
+            <summary>
+            次级列表
+            </summary>
+        </member>
+        <member name="P:Pear.Core.SystemDataCategory.Data">
+            <summary>
+            分组数据
+            </summary>
+        </member>
+        <member name="M:Pear.Core.SystemDataCategory.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{Pear.Core.SystemDataCategory},Microsoft.EntityFrameworkCore.DbContext,System.Type)">
+            <summary>
+            配置实体
+            </summary>
+            <param name="entityBuilder"></param>
+            <param name="dbContext"></param>
+            <param name="dbContextLocator"></param>
+        </member>
+        <member name="T:Pear.Core.Role">
+            <summary>
+            角色表
+            </summary>
+        </member>
+        <member name="M:Pear.Core.Role.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Pear.Core.Role.Name">
+            <summary>
+            角色名称
+            </summary>
+        </member>
+        <member name="P:Pear.Core.Role.Remark">
+            <summary>
+            角色描述
+            </summary>
+        </member>
+        <member name="P:Pear.Core.Role.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Pear.Core.Role.Users">
+            <summary>
+            多对多
+            </summary>
+        </member>
+        <member name="P:Pear.Core.Role.UserRoles">
+            <summary>
+            多对多中间表
+            </summary>
+        </member>
+        <member name="P:Pear.Core.Role.Securities">
+            <summary>
+            多对多
+            </summary>
+        </member>
+        <member name="P:Pear.Core.Role.RoleSecurities">
+            <summary>
+            多对多中间表
+            </summary>
+        </member>
+        <member name="M:Pear.Core.Role.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{Pear.Core.Role},Microsoft.EntityFrameworkCore.DbContext,System.Type)">
+            <summary>
+            配置多对多关系
+            </summary>
+            <param name="entityBuilder"></param>
+            <param name="dbContext"></param>
+            <param name="dbContextLocator"></param>
+        </member>
+        <member name="T:Pear.Core.RoleSecurity">
+            <summary>
+            角色和权限关系表
+            </summary>
+        </member>
+        <member name="P:Pear.Core.RoleSecurity.RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:Pear.Core.RoleSecurity.Role">
+            <summary>
+            一对一引用
+            </summary>
+        </member>
+        <member name="P:Pear.Core.RoleSecurity.SecurityId">
+            <summary>
+            权限Id
+            </summary>
+        </member>
+        <member name="P:Pear.Core.RoleSecurity.Security">
+            <summary>
+            一对一引用
+            </summary>
+        </member>
+        <member name="T:Pear.Core.Security">
+            <summary>
+            权限表
+            </summary>
+        </member>
+        <member name="M:Pear.Core.Security.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Pear.Core.Security.UniqueName">
+            <summary>
+            权限唯一名（每一个接口）
+            </summary>
+        </member>
+        <member name="P:Pear.Core.Security.Remark">
+            <summary>
+            全新描述
+            </summary>
+        </member>
+        <member name="P:Pear.Core.Security.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Pear.Core.Security.Roles">
+            <summary>
+            多对多
+            </summary>
+        </member>
+        <member name="P:Pear.Core.Security.RoleSecurities">
+            <summary>
+            多对多中间表
+            </summary>
+        </member>
+        <member name="T:Pear.Core.User">
+            <summary>
+            用户表
+            </summary>
+        </member>
+        <member name="M:Pear.Core.User.#ctor">
+            <summary>
+            构造函数
+            </summary>
+        </member>
+        <member name="P:Pear.Core.User.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:Pear.Core.User.Password">
+            <summary>
+            密码（采用 MD5 加密）
+            </summary>
+        </member>
+        <member name="P:Pear.Core.User.Nickname">
+            <summary>
+            昵称
+            </summary>
+        </member>
+        <member name="P:Pear.Core.User.Photo">
+            <summary>
+            头像（OSS地址）
+            </summary>
+        </member>
+        <member name="P:Pear.Core.User.Synopsis">
+            <summary>
+            简介
+            </summary>
+        </member>
+        <member name="P:Pear.Core.User.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="P:Pear.Core.User.SigninedTime">
+            <summary>
+            最近登录时间
+            </summary>
+        </member>
+        <member name="P:Pear.Core.User.Enabled">
+            <summary>
+            是否启用
+            </summary>
+        </member>
+        <member name="P:Pear.Core.User.Roles">
+            <summary>
+            多对多
+            </summary>
+        </member>
+        <member name="P:Pear.Core.User.UserRoles">
+            <summary>
+            多对多中间表
+            </summary>
+        </member>
+        <member name="M:Pear.Core.User.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{Pear.Core.User},Microsoft.EntityFrameworkCore.DbContext,System.Type)">
+            <summary>
+            配置多对多关系
+            </summary>
+            <param name="entityBuilder"></param>
+            <param name="dbContext"></param>
+            <param name="dbContextLocator"></param>
+        </member>
+        <member name="T:Pear.Core.UserRole">
+            <summary>
+            用户和角色关系表
+            </summary>
+        </member>
+        <member name="P:Pear.Core.UserRole.UserId">
+            <summary>
+            用户Id
+            </summary>
+        </member>
+        <member name="P:Pear.Core.UserRole.User">
+            <summary>
+            一对一引用
+            </summary>
+        </member>
+        <member name="P:Pear.Core.UserRole.RoleId">
+            <summary>
+            角色Id
+            </summary>
+        </member>
+        <member name="P:Pear.Core.UserRole.Role">
+            <summary>
+            一对一引用
+            </summary>
+        </member>
+        <member name="T:Pear.Core.Gender">
+            <summary>
+            性别
+            </summary>
+        </member>
+        <member name="F:Pear.Core.Gender.Male">
+            <summary>
+            男
+            </summary>
+        </member>
+        <member name="F:Pear.Core.Gender.Female">
+            <summary>
+            女
+            </summary>
+        </member>
+        <member name="T:Pear.Core.SystemErrorCodes">
+            <summary>
+            业务日志错误码
+            </summary>
+        </member>
+        <member name="F:Pear.Core.SystemErrorCodes.u1000">
+            <summary>
+            用户名或密码不正确
+            </summary>
+        </member>
+        <member name="F:Pear.Core.SystemErrorCodes.u1001">
+            <summary>
+            非法操作！禁止删除自己
+            </summary>
+        </member>
+        <member name="F:Pear.Core.SystemErrorCodes.u1002">
+            <summary>
+            记录不存在
+            </summary>
+        </member>
+        <member name="F:Pear.Core.SystemErrorCodes.u1003">
+            <summary>
+            账号已存在
+            </summary>
+        </member>
+        <member name="F:Pear.Core.SystemErrorCodes.u1004">
+            <summary>
+            旧密码不匹配
+            </summary>
+        </member>
+        <member name="F:Pear.Core.SystemErrorCodes.u1005">
+            <summary>
+            测试数据禁止更改 admin 密码
+            </summary>
+        </member>
+        <member name="F:Pear.Core.SystemErrorCodes.u1006">
+            <summary>
+            数据已存在
+            </summary>
+        </member>
+        <member name="F:Pear.Core.SystemErrorCodes.u1007">
+            <summary>
+            数据不存在或含有关联引用，禁止删除
+            </summary>
+        </member>
+        <member name="F:Pear.Core.SystemErrorCodes.u1008">
+            <summary>
+            禁止为管理员分配角色
+            </summary>
+        </member>
+        <member name="F:Pear.Core.SystemErrorCodes.u1009">
+            <summary>
+            记录含有不存在数据
+            </summary>
+        </member>
+        <member name="F:Pear.Core.SystemErrorCodes.u1010">
+            <summary>
+            禁止为超级管理员角色分配权限
+            </summary>
+        </member>
+        <member name="F:Pear.Core.SystemErrorCodes.u1011">
+            <summary>
+            非法数据
+            </summary>
+        </member>
+        <member name="T:Pear.Core.IUserManager">
+            <summary>
+            用户管理接口
+            </summary>
+        </member>
+        <member name="P:Pear.Core.IUserManager.UserId">
+            <summary>
+            获取用户 Id
+            </summary>
+        </member>
+        <member name="P:Pear.Core.IUserManager.User">
+            <summary>
+            获取用户信息
+            </summary>
+        </member>
+        <member name="M:Pear.Core.IUserManager.CheckUserAsync(System.Int32,System.Boolean)">
+            <summary>
+            检查用户是否有效
+            </summary>
+            <param name="userId"></param>
+            <param name="tracking"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Core.IUserManager.GetSecuritiesAsync(System.Int32)">
+            <summary>
+            查询用户权限
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pear.Core.UserManager">
+            <summary>
+            用户管理接口
+            </summary>
+        </member>
+        <member name="F:Pear.Core.UserManager._userRepository">
+            <summary>
+            用户仓储
+            </summary>
+        </member>
+        <member name="F:Pear.Core.UserManager._httpContextAccessor">
+            <summary>
+            HttpContext 访问器
+            </summary>
+        </member>
+        <member name="F:Pear.Core.UserManager._memoryCache">
+            <summary>
+            缓存
+            </summary>
+        </member>
+        <member name="M:Pear.Core.UserManager.#ctor(Microsoft.AspNetCore.Http.IHttpContextAccessor,Furion.DatabaseAccessor.IRepository{Pear.Core.User},Microsoft.Extensions.Caching.Memory.IMemoryCache)">
+            <summary>
+            构造函数
+            </summary>
+            <param name="httpContextAccessor"></param>
+            <param name="userRepository"></param>
+            <param name="memoryCache"></param>
+        </member>
+        <member name="P:Pear.Core.UserManager.UserId">
+            <summary>
+            获取用户 Id
+            </summary>
+        </member>
+        <member name="P:Pear.Core.UserManager.User">
+            <summary>
+            获取用户信息
+            </summary>
+        </member>
+        <member name="M:Pear.Core.UserManager.CheckUserAsync(System.Int32,System.Boolean)">
+            <summary>
+            检查用户是否有效
+            </summary>
+            <param name="userId"></param>
+            <param name="tracking"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Pear.Core.UserManager.GetSecuritiesAsync(System.Int32)">
+            <summary>
+            查询用户权限
+            </summary>
+            <param name="userId"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pear.Core.SeedData.RoleSeedData">
+            <summary>
+            用户表种子数据 <see cref="T:Pear.Core.Role"/>
+            </summary>
+        </member>
+        <member name="M:Pear.Core.SeedData.RoleSeedData.HasData(Microsoft.EntityFrameworkCore.DbContext,System.Type)">
+            <summary>
+            种子数据
+            </summary>
+            <param name="dbContext"></param>
+            <param name="dbContextLocator"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pear.Core.SeedData.SecuritySeedData">
+            <summary>
+            用户表种子数据 <see cref="T:Pear.Core.Security"/>
+            </summary>
+        </member>
+        <member name="M:Pear.Core.SeedData.SecuritySeedData.HasData(Microsoft.EntityFrameworkCore.DbContext,System.Type)">
+            <summary>
+            种子数据
+            </summary>
+            <param name="dbContext"></param>
+            <param name="dbContextLocator"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pear.Core.SeedData.SystemDataCategorySeedData">
+            <summary>
+            数据字典分类种子数据
+            </summary>
+        </member>
+        <member name="M:Pear.Core.SeedData.SystemDataCategorySeedData.HasData(Microsoft.EntityFrameworkCore.DbContext,System.Type)">
+            <summary>
+            种子数据
+            </summary>
+            <param name="dbContext"></param>
+            <param name="dbContextLocator"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pear.Core.SeedData.SystemDataSeedData">
+            <summary>
+            数据字典种子数据
+            </summary>
+        </member>
+        <member name="M:Pear.Core.SeedData.SystemDataSeedData.HasData(Microsoft.EntityFrameworkCore.DbContext,System.Type)">
+            <summary>
+            种子数据
+            </summary>
+            <param name="dbContext"></param>
+            <param name="dbContextLocator"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Pear.Core.SeedData.UserSeedData">
+            <summary>
+            用户表种子数据 <see cref="T:Pear.Core.User"/>
+            </summary>
+        </member>
+        <member name="M:Pear.Core.SeedData.UserSeedData.HasData(Microsoft.EntityFrameworkCore.DbContext,System.Type)">
+            <summary>
+            种子数据
+            </summary>
+            <param name="dbContext"></param>
+            <param name="dbContextLocator"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

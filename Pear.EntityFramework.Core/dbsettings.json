@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "Furion": "Data Source=120.76.199.172;Database=myfurion;User ID=root;Password=soho250!;pooling=true;port=3307;sslmode=none;CharSet=utf8;"
+  }
+}

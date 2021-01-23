@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+    <NoWarn>1701;1702;1591</NoWarn>
+    <DocumentationFile>Pear.Core.xml</DocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Pear.Core.xml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Furion" Version="1.8.6" />
+    <PackageReference Include="Furion.Extras.Authentication.JwtBearer" Version="1.7.2" />
+    <PackageReference Include="Furion.Extras.ObjectMapper.Mapster" Version="1.5.3" />
+  </ItemGroup>
+
+</Project>

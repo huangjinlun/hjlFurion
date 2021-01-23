@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Pear.Web.Core</name>
+    </assembly>
+    <members>
+        <member name="M:Pear.Web.Core.JwtHandler.CheckAuthorzieAsync(Microsoft.AspNetCore.Http.DefaultHttpContext)">
+            <summary>
+            检查权限
+            </summary>
+            <param name="httpContext"></param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
