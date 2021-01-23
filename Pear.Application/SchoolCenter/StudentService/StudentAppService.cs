@@ -42,12 +42,12 @@ namespace Pear.Application.SchoolCenter
         public async Task<PagedList<StudentProfile>> GetListAsync([FromQuery, Required] GetStudentListInput input)
         {
             var classTeacherRepository = _teacherRepository.Change<ClassTeacher>();
-            var teacherRepository = _teacherRepository.Change<Teacher>();
 
+            var hasKeyword = !string.IsNullOrEmpty(input.Keyword?.Trim());
             var query = from p in _studnetRepository.AsQueryable()
                         join d in _schoolClassRepository.AsQueryable() on p.SchoolClass.Id equals d.Id
                         join c in classTeacherRepository.AsQueryable() on p.SchoolClass.Id equals c.SchoolClassId
-                        join e in teacherRepository.AsQueryable() on c.TeacherId equals e.Id
+                        join e in _teacherRepository.AsQueryable() on c.TeacherId equals e.Id
                         select new StudentProfile
                         {
                             SchoolClassName = d.ClassName,
@@ -58,16 +58,9 @@ namespace Pear.Application.SchoolCenter
                             Birthday=p.Birthday,
                             SchoolClassId=d.Id
                         };
-           
-            var hasKeyword = !string.IsNullOrEmpty(input.Keyword?.Trim());
             var tempStudents = await query.Where(
                                                 (hasKeyword, g => EF.Functions.Like(g.Name, $"%{input.Keyword.Trim()}%"))
                                               ).ToPagedListAsync(input.PageIndex, input.PageSize);
-
-            //var student = await _studnetRepository.Where(
-            //                                    (hasKeyword, g => EF.Functions.Like(g.Name, $"%{input.Keyword.Trim()}%"))
-            //                                  )
-            //                                 .ToPagedListAsync(input.PageIndex, input.PageSize);
 
             return tempStudents.Adapt<PagedList<StudentProfile>>();
         }
