@@ -31,7 +31,12 @@ namespace Pear.Core
         /// 多对多中间表
         /// </summary>
         public ICollection<ClassTeacher> ClassTeachers { get; set; }
-
+        /// <summary>
+        /// 配置实体映射
+        /// </summary>
+        /// <param name="entityBuilder"></param>
+        /// <param name="dbContext"></param>
+        /// <param name="dbContextLocator"></param>
         public void Configure(EntityTypeBuilder<Teacher> entityBuilder, DbContext dbContext, Type dbContextLocator)
         {
             entityBuilder.HasMany(p => p.SchoolClasss)
