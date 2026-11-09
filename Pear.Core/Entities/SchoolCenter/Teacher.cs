@@ -16,6 +16,7 @@ namespace Pear.Core
         /// </summary>
         public Teacher()
         {
+            // 初始化集合
             CreatedTime = DateTimeOffset.Now;
             IsDeleted = false;
         }
