@@ -54,6 +54,14 @@
             多对多中间表
             </summary>
         </member>
+        <member name="M:Pear.Core.Teacher.Configure(Microsoft.EntityFrameworkCore.Metadata.Builders.EntityTypeBuilder{Pear.Core.Teacher},Microsoft.EntityFrameworkCore.DbContext,System.Type)">
+            <summary>
+            配置实体映射
+            </summary>
+            <param name="entityBuilder"></param>
+            <param name="dbContext"></param>
+            <param name="dbContextLocator"></param>
+        </member>
         <member name="T:Pear.Core.SystemData">
             <summary>
             数据字典

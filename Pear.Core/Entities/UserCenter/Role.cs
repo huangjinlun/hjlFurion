@@ -17,7 +17,7 @@ namespace Pear.Core
         /// </summary>
         public Role()
         {
-            CreatedTime = DateTimeOffset.Now;
+            CreatedTime = DateTimeOffset.UtcNow;
             IsDeleted = false;
             Enabled = true;
         }
@@ -42,22 +42,22 @@ namespace Pear.Core
         /// <summary>
         /// 多对多
         /// </summary>
-        public ICollection<User> Users { get; set; }
+        public ICollection<User> Users { get; set; } = new List<User>();
 
         /// <summary>
         /// 多对多中间表
         /// </summary>
-        public List<UserRole> UserRoles { get; set; }
+        public ICollection<UserRole> UserRoles { get; set; } = new List<UserRole>();
 
         /// <summary>
         /// 多对多
         /// </summary>
-        public ICollection<Security> Securities { get; set; }
+        public ICollection<Security> Securities { get; set; } = new List<Security>();
 
         /// <summary>
         /// 多对多中间表
         /// </summary>
-        public List<RoleSecurity> RoleSecurities { get; set; }
+        public ICollection<RoleSecurity> RoleSecurities { get; set; } = new List<RoleSecurity>();
 
         /// <summary>
         /// 配置多对多关系
@@ -67,6 +67,8 @@ namespace Pear.Core
         /// <param name="dbContextLocator"></param>
         public void Configure(EntityTypeBuilder<Role> entityBuilder, DbContext dbContext, Type dbContextLocator)
         {
+            entityBuilder.HasIndex(p => p.Name).IsUnique();
+
             entityBuilder.HasMany(p => p.Securities)
                 .WithMany(p => p.Roles)
                 .UsingEntity<RoleSecurity>(
